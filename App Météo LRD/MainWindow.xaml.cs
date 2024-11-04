@@ -28,7 +28,7 @@ namespace App_Météo_LRD
             LoadWeather();
         }
 
-        public async Task<Main> GetWeather()
+        public async Task<Root> GetWeather()
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("https://api.openweathermap.org/data/2.5/weather?q=annecy,fr&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric");
@@ -36,7 +36,7 @@ namespace App_Météo_LRD
             {
                 var content = await response.Content.ReadAsStringAsync();
                 Root weatherResponse = JsonConvert.DeserializeObject<Root>(content);
-                return weatherResponse.main;
+                return weatherResponse;
             }
             else
             {
@@ -46,15 +46,17 @@ namespace App_Météo_LRD
 
         private async void LoadWeather()
         {
-            Main weatherData = await GetWeather();
+            Root weatherData = await GetWeather();
             if (weatherData != null)
             {
                 Dispatcher.Invoke(() =>
                 {
-                    TemperatureTextBlock.Text = $"Température: {weatherData.temp}°C";
-                    FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.feels_like}°C";
-                    TempMinTextBlock.Text = $"Température Min: {weatherData.temp_min}°C";
-                    TempMaxTextBlock.Text = $"Température Max: {weatherData.temp_max}°C";
+                    TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C";
+                    FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C";
+                    TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C";
+                    TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C";
+                    HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%";
+                    CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all);
                 });
             }
             else
@@ -63,6 +65,29 @@ namespace App_Météo_LRD
                 {
                     TemperatureTextBlock.Text = "Erreur de récupération des données";
                 });
+            }
+        }
+        private string GetCloudDescription(int cloudiness)
+        {
+            if (cloudiness == 0)
+            {
+                return "Ciel clair";
+            }
+            else if (cloudiness <= 20)
+            {
+                return "Quelques nuages";
+            }
+            else if (cloudiness <= 50)
+            {
+                return "Partiellement nuageux";
+            }
+            else if (cloudiness <= 80)
+            {
+                return "Nuageux";
+            }
+            else
+            {
+                return "Très nuageux";
             }
         }
 
