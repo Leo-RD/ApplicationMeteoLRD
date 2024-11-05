@@ -28,7 +28,7 @@ namespace App_Météo_LRD
             LoadWeather();
         }
 
-        public async Task<Root> GetWeather()
+        public async Task<Root> GetWeather() // Fonction pour récupérer les données météo
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("https://api.openweathermap.org/data/2.5/weather?q=annecy,fr&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric");
@@ -44,19 +44,19 @@ namespace App_Météo_LRD
             }
         }
 
-        private async void LoadWeather()
+        private async void LoadWeather() // Fonction pour charger les données météo
         {
             Root weatherData = await GetWeather();
             if (weatherData != null)
             {
                 Dispatcher.Invoke(() =>
                 {
-                    TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C";
-                    FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C";
-                    TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C";
-                    TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C";
-                    HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%";
-                    CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all);
+                    TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C"; // Affichage de la température
+                    FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C"; // Affichage de la température ressentie
+                    TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C"; // Affichage de la température minimale
+                    TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C"; // Affichage de la température maximale
+                    HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%"; // Affichage de l'humidité
+                    CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all); // Affichage de la masse nuageuse
                 });
             }
             else
@@ -67,7 +67,7 @@ namespace App_Météo_LRD
                 });
             }
         }
-        private string GetCloudDescription(int cloudiness)
+        private string GetCloudDescription(int cloudiness) // Fonction pour décrire la masse nuageuse
         {
             if (cloudiness == 0)
             {
@@ -94,6 +94,7 @@ namespace App_Météo_LRD
 
 
             // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+            // Informations JSON converties en classes C#
     public class Clouds
         {
             public int all { get; set; }
