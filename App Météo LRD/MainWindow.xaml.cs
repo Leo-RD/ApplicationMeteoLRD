@@ -49,22 +49,20 @@ namespace App_Météo_LRD
             Root weatherData = await GetWeather();
             if (weatherData != null)
             {
-                Dispatcher.Invoke(() =>
-                {
-                    TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C"; // Affichage de la température
-                    FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C"; // Affichage de la température ressentie
-                    TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C"; // Affichage de la température minimale
-                    TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C"; // Affichage de la température maximale
-                    HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%"; // Affichage de l'humidité
-                    CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all); // Affichage de la masse nuageuse
-                });
+               
+              TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C"; // Affichage de la température
+              FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C"; // Affichage de la température ressentie
+              TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C"; // Affichage de la température minimale
+              TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C"; // Affichage de la température maximale
+              HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%"; // Affichage de l'humidité
+              CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all); // Affichage de la masse nuageuse
+                
             }
             else
             {
-                Dispatcher.Invoke(() =>
-                {
-                    TemperatureTextBlock.Text = "Erreur de récupération des données";
-                });
+               
+             TemperatureTextBlock.Text = "Erreur de récupération des données";
+              
             }
         }
         private string GetCloudDescription(int cloudiness) // Fonction pour décrire la masse nuageuse
