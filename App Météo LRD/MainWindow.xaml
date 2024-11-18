@@ -31,7 +31,7 @@
             HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="TempMaxTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="High: 66°" Margin="0,0,20,0"/>
             <TextBlock x:Name="TempMinTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Low: 43°" Margin="0,0,20,0"/>
-            <TextBlock x:Name="FeelsLikeTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Feels like: 63°"/>
+            <TextBlock x:Name="HourTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Feels like: 63°"/>
         </StackPanel>
         <Image Margin="20" Source="Assets/weathericonblue.png"/>
     </Grid>

@@ -14,12 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Apiclasses;
 
 namespace App_Météo_LRD
 {
-    /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -28,136 +26,44 @@ namespace App_Météo_LRD
             LoadWeather();
         }
 
-        public async Task<Root> GetWeather() // Fonction pour récupérer les données météo
+        public async Task<WeatherResponse> GetWeather() // Nouvelle méthode pour récupérer les données météo
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://api.openweathermap.org/data/2.5/weather?q=annecy,fr&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric");
+
+            HttpResponseMessage response = await client.GetAsync("https://www.prevision-meteo.ch/services/json/Annecy");
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-                Root weatherResponse = JsonConvert.DeserializeObject<Root>(content);
-                return weatherResponse;
+                return JsonConvert.DeserializeObject<WeatherResponse>(content);
             }
             else
             {
                 return null;
             }
         }
-
-        private async void LoadWeather() // Fonction pour charger les données météo
+        private async void LoadWeather() // Mise à jour pour utiliser la nouvelle API
         {
             Root weatherData = await GetWeather();
             if (weatherData != null)
             {
-               
-              TemperatureTextBlock.Text = $"Température: {weatherData.main.temp}°C"; // Affichage de la température
-              FeelsLikeTextBlock.Text = $"Ressenti: {weatherData.main.feels_like}°C"; // Affichage de la température ressentie
-              TempMinTextBlock.Text = $"Température Min: {weatherData.main.temp_min}°C"; // Affichage de la température minimale
-              TempMaxTextBlock.Text = $"Température Max: {weatherData.main.temp_max}°C"; // Affichage de la température maximale
-              HumidityTextBlock.Text = $"Humidité: {weatherData.main.humidity}%"; // Affichage de l'humidité
-              CloudTextBlock.Text = GetCloudDescription(weatherData.clouds.all); // Affichage de la masse nuageuse
-                
+                TemperatureTextBlock.Text = $"Température: {weatherData.current_condition.tmp}°C";
+                HourTextBlock.Text = $"Ressenti: {weatherData.current_condition.hour}°C";
+                TempMinTextBlock.Text = $"Température Min: {weatherData.fcst_day_0.tmin}°C";
+                TempMaxTextBlock.Text = $"Température Max: {weatherData.fcst_day_0.tmax}°C";
+                HumidityTextBlock.Text = $"Humidité: {weatherData.current_condition.humidity}%";
+                CloudTextBlock.Text = weatherData.current_condition.condition;
             }
             else
             {
-               
-             TemperatureTextBlock.Text = "Erreur de récupération des données";
-              
-            }
-        }
-        private string GetCloudDescription(int cloudiness) // Fonction pour décrire la masse nuageuse
-        {
-            if (cloudiness == 0)
-            {
-                return "Ciel clair";
-            }
-            else if (cloudiness <= 20)
-            {
-                return "Quelques nuages";
-            }
-            else if (cloudiness <= 50)
-            {
-                return "Partiellement nuageux";
-            }
-            else if (cloudiness <= 80)
-            {
-                return "Nuageux";
-            }
-            else
-            {
-                return "Très nuageux";
+                TemperatureTextBlock.Text = "Erreur de récupération des données";
             }
         }
 
 
-
-            // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-            // Informations JSON converties en classes C#
-    public class Clouds
+        public class WeatherResponse 
         {
-            public int all { get; set; }
+            public CurrentCondition CurrentCondition { get; set; }
+            public FcstDay0 fcst_day_0 { get; set; }
         }
-
-        public class Coord
-        {
-            public double lon { get; set; }
-            public double lat { get; set; }
-        }
-
-        public class Main
-        {
-            public double temp { get; set; }
-            public double feels_like { get; set; }
-            public double temp_min { get; set; }
-            public double temp_max { get; set; }
-            public int pressure { get; set; }
-            public int humidity { get; set; }
-            public int sea_level { get; set; }
-            public int grnd_level { get; set; }
-        }
-
-        public class Root
-        {
-            public Coord coord { get; set; }
-            public List<Weather> weather { get; set; }
-            public string @base { get; set; }
-            public Main main { get; set; }
-            public int visibility { get; set; }
-            public Wind wind { get; set; }
-            public Clouds clouds { get; set; }
-            public int dt { get; set; }
-            public Sys sys { get; set; }
-            public int timezone { get; set; }
-            public int id { get; set; }
-            public string name { get; set; }
-            public int cod { get; set; }
-        }
-
-        public class Sys
-        {
-            public int type { get; set; }
-            public int id { get; set; }
-            public string country { get; set; }
-            public int sunrise { get; set; }
-            public int sunset { get; set; }
-        }
-
-        public class Weather
-        {
-            public int id { get; set; }
-            public string main { get; set; }
-            public string description { get; set; }
-            public string icon { get; set; }
-        }
-
-        public class Wind
-        {
-            public double speed { get; set; }
-            public int deg { get; set; }
-        }
-
     }
 }
-
- 
-
