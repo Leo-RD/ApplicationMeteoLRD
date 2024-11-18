@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Apiclasses
+namespace ApiClasses
 {
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class _0H00
     {
         public string ICON { get; set; }
@@ -17,21 +16,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _10H00
@@ -43,21 +42,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _11H00
@@ -69,21 +68,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _12H00
@@ -95,21 +94,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _13H00
@@ -121,21 +120,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _14H00
@@ -147,21 +146,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
-        public int PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double RH2m { get; set; }
+        public double PRMSL { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _15H00
@@ -173,21 +172,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _16H00
@@ -201,19 +200,19 @@ namespace Apiclasses
         public object HUMIDEX { get; set; }
         public int RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _17H00
@@ -225,21 +224,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
-        public int PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double RH2m { get; set; }
+        public double PRMSL { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _18H00
@@ -251,21 +250,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _19H00
@@ -277,21 +276,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _1H00
@@ -303,21 +302,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _20H00
@@ -325,25 +324,25 @@ namespace Apiclasses
         public string ICON { get; set; }
         public string CONDITION { get; set; }
         public string CONDITION_KEY { get; set; }
-        public int TMP2m { get; set; }
+        public double TMP2m { get; set; }
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _21H00
@@ -355,21 +354,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _22H00
@@ -381,21 +380,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _23H00
@@ -407,21 +406,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _2H00
@@ -433,21 +432,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _3H00
@@ -459,21 +458,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _4H00
@@ -485,21 +484,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _5H00
@@ -511,21 +510,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _6H00
@@ -537,21 +536,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
-        public int PRMSL { get; set; }
-        public int APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double RH2m { get; set; }
+        public double PRMSL { get; set; }
+        public double APCPsfc { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _7H00
@@ -563,21 +562,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
         public double APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _8H00
@@ -589,21 +588,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
         public double APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class _9H00
@@ -615,21 +614,21 @@ namespace Apiclasses
         public double DPT2m { get; set; }
         public double WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
-        public int RH2m { get; set; }
+        public double RH2m { get; set; }
         public double PRMSL { get; set; }
         public double APCPsfc { get; set; }
-        public int WNDSPD10m { get; set; }
-        public int WNDGUST10m { get; set; }
-        public int WNDDIR10m { get; set; }
+        public double WNDSPD10m { get; set; }
+        public double WNDGUST10m { get; set; }
+        public double WNDDIR10m { get; set; }
         public string WNDDIRCARD10 { get; set; }
-        public int ISSNOW { get; set; }
+        public double ISSNOW { get; set; }
         public string HCDC { get; set; }
         public string MCDC { get; set; }
         public string LCDC { get; set; }
-        public int HGT0C { get; set; }
-        public int KINDEX { get; set; }
+        public double HGT0C { get; set; }
+        public double KINDEX { get; set; }
         public string CAPE180_0 { get; set; }
-        public int CIN180_0 { get; set; }
+        public double CIN180_0 { get; set; }
     }
 
     public class CityInfo
@@ -822,6 +821,4 @@ namespace Apiclasses
         public FcstDay3 fcst_day_3 { get; set; }
         public FcstDay4 fcst_day_4 { get; set; }
     }
-
-
 }

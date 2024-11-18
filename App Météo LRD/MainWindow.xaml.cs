@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http;
 using Newtonsoft.Json;
-using Apiclasses;
+using ApiClasses;
 
 namespace App_Météo_LRD
 {
@@ -26,15 +26,14 @@ namespace App_Météo_LRD
             LoadWeather();
         }
 
-        public async Task<WeatherResponse> GetWeather() // Nouvelle méthode pour récupérer les données météo
+        public async Task<Root> GetWeather() // Nouvelle méthode pour récupérer les données météo
         {
             HttpClient client = new HttpClient();
-
             HttpResponseMessage response = await client.GetAsync("https://www.prevision-meteo.ch/services/json/Annecy");
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<WeatherResponse>(content);
+                return JsonConvert.DeserializeObject<Root>(content);
             }
             else
             {
@@ -43,27 +42,37 @@ namespace App_Météo_LRD
         }
         private async void LoadWeather() // Mise à jour pour utiliser la nouvelle API
         {
-            Root weatherData = await GetWeather();
-            if (weatherData != null)
+            Root root = await GetWeather();
+            if (root != null && root.current_condition != null)
             {
-                TemperatureTextBlock.Text = $"Température: {weatherData.current_condition.tmp}°C";
-                HourTextBlock.Text = $"Ressenti: {weatherData.current_condition.hour}°C";
-                TempMinTextBlock.Text = $"Température Min: {weatherData.fcst_day_0.tmin}°C";
-                TempMaxTextBlock.Text = $"Température Max: {weatherData.fcst_day_0.tmax}°C";
-                HumidityTextBlock.Text = $"Humidité: {weatherData.current_condition.humidity}%";
-                CloudTextBlock.Text = weatherData.current_condition.condition;
+                TemperatureTextBlock.Text = $"Température: {root.current_condition.tmp}°C";
+                HourTextBlock.Text = $"Heure: {root.current_condition.hour}";
+                TempMinTextBlock.Text = $"Température Min: {root.fcst_day_0.tmin}°C";
+                TempMaxTextBlock.Text = $"Température Max: {root.fcst_day_0.tmax}°C";
+                HumidityTextBlock.Text = $"Humidité: {root.current_condition.humidity}%";
+                CloudTextBlock.Text = root.current_condition.condition;
             }
             else
             {
                 TemperatureTextBlock.Text = "Erreur de récupération des données";
             }
+            //WeatherResponse weatherData = await GetWeather();
+            //if (weatherData != null && weatherData.currentCondition != null)
+            //{
+            //    TemperatureTextBlock.Text = $"Température: {weatherData.currentCondition.tmp}°C";
+            //    HourTextBlock.Text = $"Ressenti: {weatherData.currentCondition.hour}°C";
+            //    TempMinTextBlock.Text = $"Température Min: {weatherData.fcst_day_0.tmin}°C";
+            //    TempMaxTextBlock.Text = $"Température Max: {weatherData.fcst_day_0.tmax}°C";
+            //    HumidityTextBlock.Text = $"Humidité: {weatherData.currentCondition.humidity}%";
+            //    CloudTextBlock.Text = weatherData.currentCondition.condition;
+            //}
+            //else
+            //{
+            //    TemperatureTextBlock.Text = "Erreur de récupération des données";
+            //}
         }
 
 
-        public class WeatherResponse 
-        {
-            public CurrentCondition CurrentCondition { get; set; }
-            public FcstDay0 fcst_day_0 { get; set; }
-        }
+      
     }
 }
