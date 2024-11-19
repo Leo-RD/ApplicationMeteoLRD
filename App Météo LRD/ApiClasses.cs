@@ -14,7 +14,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -40,7 +40,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -66,7 +66,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -92,7 +92,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -118,7 +118,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -144,7 +144,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -170,7 +170,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -196,7 +196,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public int RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -222,7 +222,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -248,7 +248,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -274,7 +274,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -300,7 +300,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -326,7 +326,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -352,7 +352,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -378,7 +378,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -404,7 +404,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -430,7 +430,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -456,7 +456,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -482,7 +482,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -508,7 +508,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -534,7 +534,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -560,7 +560,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -586,7 +586,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }
@@ -612,7 +612,7 @@ namespace ApiClasses
         public string CONDITION_KEY { get; set; }
         public double TMP2m { get; set; }
         public double DPT2m { get; set; }
-        public double WNDCHILL2m { get; set; }
+        public double? WNDCHILL2m { get; set; }
         public object HUMIDEX { get; set; }
         public double RH2m { get; set; }
         public double PRMSL { get; set; }

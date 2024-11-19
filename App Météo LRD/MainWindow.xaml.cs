@@ -23,13 +23,14 @@ namespace App_Météo_LRD
         public MainWindow()
         {
             InitializeComponent();
-            LoadWeather();
+            LoadWeather("Annecy"); // Charge la météo par défaut pour Annecy
         }
 
-        public async Task<Root> GetWeather() // Nouvelle méthode pour récupérer les données météo
+        public async Task<Root> GetWeather(string city) // Accepte le nom de la ville
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://www.prevision-meteo.ch/services/json/Annecy");
+            string url = $"https://www.prevision-meteo.ch/services/json/{city}"; // Modifie l'URL selon la ville
+            HttpResponseMessage response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
@@ -40,39 +41,41 @@ namespace App_Météo_LRD
                 return null;
             }
         }
-        private async void LoadWeather() // Mise à jour pour utiliser la nouvelle API
+
+        private async void LoadWeather(string city) // Accepte le nom de la ville
         {
-            Root root = await GetWeather();
+            Root root = await GetWeather(city);
             if (root != null && root.current_condition != null)
             {
-                TemperatureTextBlock.Text = $"Température: {root.current_condition.tmp}°C";
-                HourTextBlock.Text = $"Heure: {root.current_condition.hour}";
-                TempMinTextBlock.Text = $"Température Min: {root.fcst_day_0.tmin}°C";
-                TempMaxTextBlock.Text = $"Température Max: {root.fcst_day_0.tmax}°C";
+                // Met à jour le texte du TextBlock avec le nom de la ville
+                CityTextBlock.Text = $"AUJOURD'HUI - {root.city_info.name}"; // Assurez-vous que 'city_name' est disponible dans votre classe Root
+
+                LundiTextBlock.Text = $"Aujourd'hui: {root.fcst_day_0.tmax}°C";
+                MardiTextBlock.Text = $"Demain: {root.fcst_day_1.tmax}°C";
+                MercrediTextBlock.Text = $"Après-demain: {root.fcst_day_2.tmax}°C";
+                JeudiTextBlock.Text = $"Trois jours: {root.fcst_day_3.tmax}°C";
                 HumidityTextBlock.Text = $"Humidité: {root.current_condition.humidity}%";
                 CloudTextBlock.Text = root.current_condition.condition;
+                TemperatureTextBlock.Text = $"{root.current_condition.tmp}°C";
             }
             else
             {
                 TemperatureTextBlock.Text = "Erreur de récupération des données";
             }
-            //WeatherResponse weatherData = await GetWeather();
-            //if (weatherData != null && weatherData.currentCondition != null)
-            //{
-            //    TemperatureTextBlock.Text = $"Température: {weatherData.currentCondition.tmp}°C";
-            //    HourTextBlock.Text = $"Ressenti: {weatherData.currentCondition.hour}°C";
-            //    TempMinTextBlock.Text = $"Température Min: {weatherData.fcst_day_0.tmin}°C";
-            //    TempMaxTextBlock.Text = $"Température Max: {weatherData.fcst_day_0.tmax}°C";
-            //    HumidityTextBlock.Text = $"Humidité: {weatherData.currentCondition.humidity}%";
-            //    CloudTextBlock.Text = weatherData.currentCondition.condition;
-            //}
-            //else
-            //{
-            //    TemperatureTextBlock.Text = "Erreur de récupération des données";
-            //}
         }
 
-
-      
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Récupère le nom de la ville depuis la TextBox
+            string city = Recherche.Text.Trim(); // Enlève les espaces superflus
+            if (!string.IsNullOrEmpty(city))
+            {
+                LoadWeather(city); // Charge la météo pour la ville saisie
+            }
+            else
+            {
+                MessageBox.Show("Veuillez entrer un nom de ville valide.");
+            }
+        }
     }
 }

@@ -19,9 +19,11 @@
             <Label Content="© November 2024 ROUX-DECORZENT Léopold" FontSize="08"/>
         </Border>
         <Border Grid.Column ="1" Background="#1f3d7a">
-            <Label Content="              AUJOURD'HUI - ANNECY (74000)" Foreground="White" VerticalAlignment="Top" FontFamily="Bookman Old Style" FontSize="20"/>
+            <TextBlock x:Name="CityTextBlock" Foreground="White" VerticalAlignment="Top" FontFamily="Bookman Old Style" FontSize="20" Text="AUJOURD'HUI - ANNECY (74000)"/>
         </Border>
-        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#1c3144"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#1c3144">
+            <TextBox x:Name="Recherche" TextWrapping="Wrap" Text="Entrez le nom d'une ville" Margin="0,117,650,0"/>
+        </Border>
         <StackPanel Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
             <TextBlock x:Name="TemperatureTextBlock" Foreground="White" FontFamily="Bookman Old Style" FontSize="25" Text="Today - 64° F"/>
             <TextBlock x:Name="CloudTextBlock" Foreground="White" FontSize="25" FontFamily="Bookman Old Style" Text="Partially Cloudy"/>
@@ -29,10 +31,13 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal"
             HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="TempMaxTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="High: 66°" Margin="0,0,20,0"/>
-            <TextBlock x:Name="TempMinTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Low: 43°" Margin="0,0,20,0"/>
-            <TextBlock x:Name="HourTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Feels like: 63°"/>
+            <TextBlock x:Name="LundiTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Lundi" Margin="0,0,20,0"/>
+            <TextBlock x:Name="MardiTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Mardi" Margin="0,0,20,0"/>
+            <TextBlock x:Name="MercrediTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Mercredi" Margin="0,0,20,0"/>
+            <TextBlock x:Name="JeudiTextBlock" Foreground="White" FontSize="22" FontFamily="Bookman Old Style" Text="Jeudi" Margin="0,0,20,0"/>
         </StackPanel>
         <Image Margin="20" Source="Assets/weathericonblue.png"/>
+        <Button Content="Rechercher" HorizontalAlignment="Left" Margin="174,115,0,0" VerticalAlignment="Top" Width="70" Grid.Row="1" RenderTransformOrigin="0.526,0.543" Click="Button_Click"/>
+
     </Grid>
 </Window>
