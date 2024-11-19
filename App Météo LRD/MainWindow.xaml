@@ -22,7 +22,7 @@
             <TextBlock x:Name="CityTextBlock" Foreground="White" VerticalAlignment="Top" FontFamily="Bookman Old Style" FontSize="20" Text="AUJOURD'HUI - ANNECY (74000)"/>
         </Border>
         <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#1c3144">
-            <TextBox x:Name="Recherche" TextWrapping="Wrap" Text="Entrez le nom d'une ville" Margin="0,117,650,0"/>
+            <TextBox x:Name="Recherche" TextWrapping="Wrap" Text="" Margin="0,117,650,0"/>
         </Border>
         <StackPanel Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
             <TextBlock x:Name="TemperatureTextBlock" Foreground="White" FontFamily="Bookman Old Style" FontSize="25" Text="Today - 64° F"/>

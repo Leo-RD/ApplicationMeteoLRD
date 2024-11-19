@@ -48,7 +48,7 @@ namespace App_Météo_LRD
             if (root != null && root.current_condition != null)
             {
                 // Met à jour le texte du TextBlock avec le nom de la ville
-                CityTextBlock.Text = $"AUJOURD'HUI - {root.city_info.name}"; // Assurez-vous que 'city_name' est disponible dans votre classe Root
+                CityTextBlock.Text = $"AUJOURD'HUI - {root.city_info.name}"; 
 
                 LundiTextBlock.Text = $"Aujourd'hui: {root.fcst_day_0.tmax}°C";
                 MardiTextBlock.Text = $"Demain: {root.fcst_day_1.tmax}°C";
